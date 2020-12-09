@@ -1,1 +1,19 @@
 @import '../../styles/global';
+
+.header {
+  display: flex;
+  height: 4.375rem;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    color: $black;
+    font-weight: $font-bold;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    padding: 0 1rem;
+  }
+}

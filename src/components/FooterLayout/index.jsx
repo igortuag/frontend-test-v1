@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.scss';
 
-function App() {
+function FooterLayout() {
   return (
     <footer>
       <h1>Footer</h1>
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default FooterLayout;
