@@ -1,11 +1,13 @@
 import React from 'react';
 
+import HomePage from './pages/home';
+
 import './styles/global.scss';
 
 function App() {
   return (
     <div className="App">
-      <h1>Front-end Test</h1>
+      <HomePage />
     </div>
   );
 }
