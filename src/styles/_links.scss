@@ -1,0 +1,20 @@
+.link-btn {
+  color: $primary;
+  cursor: pointer;
+  font-family: $font-sans;
+  font-size: $text-base;
+  font-weight: $font-bold;
+  text-decoration: none;
+  text-decoration: uppercase;
+  line-height: 19,5px;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus {
+    color: $orange;
+  }
+}
