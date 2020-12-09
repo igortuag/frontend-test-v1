@@ -1,0 +1,36 @@
+.btn {
+  background: $primary;
+  color: $white;
+  cursor: pointer;
+  font-family: $font-sans;
+  font-size: $text-base;
+  font-weight: $font-bold;
+  padding: 1.125rem 4.625rem;
+  text-decoration: uppercase;
+  outline: none;
+  border: 2px solid $primary;
+  line-height: 20px;
+
+  &:hover,
+  &:active {
+    background: $orange;
+    border: 2px solid $orange;
+  }
+
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &--ghost {
+    background: $white;
+    border: 2px solid $black;
+    color: $black;
+
+    &:hover,
+    &:active {
+      background: $off-grey;
+      border: 2px solid $black;
+    }
+  }
+}
