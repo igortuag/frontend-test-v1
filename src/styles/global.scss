@@ -1,6 +1,10 @@
 @import 'normalize';
 @import 'reset';
+@import 'variables';
+@import 'colors';
 @import 'fonts';
+@import 'layout';
+@import 'container';
 
 body {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
