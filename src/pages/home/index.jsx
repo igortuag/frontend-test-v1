@@ -4,11 +4,11 @@ import HeaderLayout from '../../components/HeaderLayout';
 import FooterLayout from '../../components/FooterLayout';
 import Banner from '../../components/Banner';
 import FilterProducts from '../../components/FilterProducts';
-import ProductsGalery from '../../components/ProductsGalery';
+import ProductsGallery from '../../components/ProductsGallery';
 
 import './styles.scss';
 
-function App() {
+function HomePage() {
   return (
     <div className="home page-layout">
       <HeaderLayout />
@@ -16,7 +16,7 @@ function App() {
         <Banner />
         <main className="products-showcase">
           <FilterProducts />
-          <ProductsGalery />
+          <ProductsGallery />
         </main>
       </div>
       <FooterLayout />
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
