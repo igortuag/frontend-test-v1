@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.scss';
 import { ReactComponent as Search } from '../../assets/img/is-search.svg';
 
-function App() {
+function SearchInput() {
   return (
     <div className="search-input">
       <div className="search-input__icon">
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default SearchInput;
