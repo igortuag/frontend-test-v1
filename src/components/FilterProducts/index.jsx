@@ -20,8 +20,8 @@ function FilterProducts() {
               name="shoe"
               className="filters__field"
             />
-            <spam className="filters__name">Shoe</spam>
-            <spam>(18)</spam>
+            <p className="filters__name">Shoe</p>
+            <p>(18)</p>
           </label>
         </li>
         <li className="filters__item">
@@ -32,8 +32,8 @@ function FilterProducts() {
               name="smartWatch"
               className="filters__field"
             />
-            <spam className="filters__name">Smart Watch</spam>
-            <spam>(81)</spam>
+            <p className="filters__name">Smart Watch</p>
+            <p>(81)</p>
           </label>
         </li>
         <li className="filters__item">
@@ -44,8 +44,8 @@ function FilterProducts() {
               name="bottle"
               className="filters__field"
             />
-            <spam className="filters__name">Bottle</spam>
-            <spam>(23)</spam>
+            <p className="filters__name">Bottle</p>
+            <p>(23)</p>
           </label>
         </li>
         <li className="filters__item">
@@ -56,8 +56,8 @@ function FilterProducts() {
               name="smartphone"
               className="filters__field"
             />
-            <spam className="filters__name">Smartphone</spam>
-            <spam>(32)</spam>
+            <p className="filters__name">Smartphone</p>
+            <p>(32)</p>
           </label>
         </li>
       </ul>
