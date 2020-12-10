@@ -1,0 +1,17 @@
+@import '../../styles/global';
+
+.nav-menu {
+  border-bottom: 1px solid #1b1b1b;
+  padding: 1rem 0;
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__link {
+    font-size: $text-xs;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../styles/global';
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $off-white-2;
+  padding: 0.9375rem 0;
+
+  &__title {
+    color: #1B1B1B;
+    font-weight: $font-bold;
+    font-size: $text-4xl;
+    max-width: 24.3125rem;
+    margin-right: -3.375rem;
+    z-index: 10;
+    line-height: 2.875rem;
+  }
+}

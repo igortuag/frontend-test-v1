@@ -21,6 +21,8 @@
   },
   "plugins": ["react", "react-hooks", "prettier", "react-app"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/prop-types": 0
   }
 }
