@@ -17,6 +17,9 @@ function HeaderLayout() {
         <a href="#" className="header__link header__link--disable">
           LOCATION
         </a>
+        <a href="#" className="header__link header__link--disable">
+          Help & Contact
+        </a>
         <a href="#" className="header__link">
           <div className="header__icon">
             <User />

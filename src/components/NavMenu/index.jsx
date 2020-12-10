@@ -23,7 +23,7 @@ function NavMenu() {
         </li>
         <li className="nav-menu__item">
           <a href="#" className="nav-menu__link">
-            KID’s FASHION
+            KID’S FASHION
           </a>
         </li>
         <li className="nav-menu__item">
