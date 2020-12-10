@@ -4,6 +4,7 @@ import HeaderLayout from '../../components/HeaderLayout';
 import FooterLayout from '../../components/FooterLayout';
 import Banner from '../../components/Banner';
 import FilterProducts from '../../components/FilterProducts';
+import ProductsGalery from '../../components/ProductsGalery';
 
 import './styles.scss';
 
@@ -15,7 +16,7 @@ function App() {
         <Banner />
         <main className="products-showcase">
           <FilterProducts />
-          <p>Produtos</p>
+          <ProductsGalery />
         </main>
       </div>
       <FooterLayout />

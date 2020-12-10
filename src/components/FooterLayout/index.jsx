@@ -52,7 +52,7 @@ function FooterLayout() {
                 placeholder="Email address"
               />
             </div>
-            <button type="button" className="btn">
+            <button type="button" className="btn btn--small">
               SIGN UP
             </button>
           </li>

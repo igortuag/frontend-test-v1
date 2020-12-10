@@ -1,0 +1,60 @@
+@import '../../styles/global';
+
+.galery {
+  display: grid;
+  grid-template-rows: 2.5rem auto 5.5625rem;
+  height: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  &__description {
+    color: $grey;
+    font-size: $text-ty;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.25rem;
+    row-gap: 2.1875rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-top: 1px solid #DADADA;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10.8125rem;
+
+  &__description {
+    font-size: $text-ty;
+    color: $grey;
+
+    &--bold {
+      font-weight: $font-bold;
+    }
+  }
+
+  &__current {
+    font-size: $text-ty;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #bdbdbd;
+  }
+}

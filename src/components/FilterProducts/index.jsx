@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.scss';
 import { ReactComponent as Filter } from '../../assets/img/ic-filter.svg';
 
-function Banner() {
+function FilterProducts() {
   return (
     <div className="filters">
       <header className="filters__header">
@@ -65,4 +65,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default FilterProducts;

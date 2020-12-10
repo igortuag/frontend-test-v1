@@ -20,6 +20,13 @@
   &:active,
   &:focus {
     text-decoration: underline;
+    outline: none;
+  }
+
+  &--small {
+  padding: 1rem 2.3125rem;
+  font-size: $text-ty;
+
   }
 
   &--ghost {
