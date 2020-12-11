@@ -9,12 +9,18 @@
   align-items: center;
   position: relative;
   transition: all 0.3s ease-in;
+  
+
+  @media (max-width: 60rem) {
+    height: 100%;
+    width: 100%;
+  }
 
   &__tag {
     position: absolute;
     top: 0.75rem;
     left: 0.75rem;
-    background:#45474F;
+    background: #45474f;
     color: $white;
     font-size: 0.625rem;
     padding: 2px 7px;
@@ -26,6 +32,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 60rem) {
+      height: 40vw;
+      width: 40vw;
+    }
   }
 
   &__footer {
@@ -90,4 +101,10 @@
       transition: all 0.3s ease-out;
     }
   }
+}
+
+.product-img {
+  display: block;
+  object-fit: contain;
+  max-height: calc(40vw - 3rem);
 }

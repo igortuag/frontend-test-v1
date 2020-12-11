@@ -34,7 +34,11 @@ function ProductsCard({
       )}
 
       <div className="card__img">
-        <img src={`img/${productImgNumber}.png`} alt={productName} />
+        <img
+          className="product-img"
+          src={`img/${productImgNumber}.png`}
+          alt={productName}
+        />
       </div>
       <button
         onClick={() => handleClickAddToCart()}

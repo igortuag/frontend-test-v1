@@ -80,18 +80,31 @@ function ProductsGallery() {
       filters.push(filterSelected);
     }
     setFilter(filters);
-    console.log(filter);
+  };
+
+  const handleActiveFilter = () => {
+    const lista = document
+      .querySelector('#filterList')
+      .classList.toggle('filters__list--active');
+
+    console.log(lista);
   };
 
   return (
     <main className="gallery-wrapper">
       <div className="filters">
-        <header className="filters__header">
-          <Filter />
+        <button
+          type="button"
+          onClick={() => handleActiveFilter()}
+          className="filters__header"
+        >
+          <div className="filters__icon">
+            <Filter />
+          </div>
           <h2 className="filters__title">FILTERS</h2>
-        </header>
+        </button>
 
-        <ul className="filters__list">
+        <ul className="filters__list" id="filterList">
           <li className="filters__item">
             <label htmlFor="shoe" className="filters__label">
               <input
