@@ -10,6 +10,11 @@
   outline: none;
   border: 2px solid $primary;
   line-height: 20px;
+  word-wrap: no-wrap;
+
+  @media (max-width: 60rem) {
+    padding: 0.75rem 2.625rem;
+  }
 
   &:hover,
   &:active {
