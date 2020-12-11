@@ -10,6 +10,17 @@
   position: relative;
   transition: all 0.3s ease-in;
 
+  &__tag {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background:#45474F;
+    color: $white;
+    font-size: 0.625rem;
+    padding: 2px 7px;
+    line-height: 150%;
+  }
+
   &__img {
     height: 19.375rem;
     display: flex;
@@ -38,9 +49,22 @@
     color: #333333;
   }
 
+  &__prices {
+    display: flex;
+    align-items: center;
+  }
+
   &__price {
     margin-top: 1.4375rem;
     font-weight: $font-bold;
+
+    &--disabled {
+      font-weight: $font-regular;
+      font-size: 12px;
+      margin-right: 0.5rem;
+      text-decoration-line: line-through;
+      color: #888888;
+    }
   }
 
   &__btn {
