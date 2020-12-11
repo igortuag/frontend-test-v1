@@ -7,13 +7,24 @@
   background: $off-white-2;
   padding: 0.9375rem 0;
 
+  @media (max-width: 60rem) {
+    flex-direction: column;
+  }
+
   &__title {
-    color: #1B1B1B;
+    color: #1b1b1b;
     font-weight: $font-bold;
     font-size: $text-4xl;
     max-width: 24.3125rem;
     margin-right: -3.375rem;
     z-index: 10;
     line-height: 2.875rem;
+
+    @media (max-width: 60rem) {
+      font-size: $text-3xl;
+      max-width: 20rem;
+      margin-right: 0;
+      margin-bottom: -3.5625rem;
+    }
   }
 }

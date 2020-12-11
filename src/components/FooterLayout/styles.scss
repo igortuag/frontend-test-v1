@@ -21,11 +21,38 @@
   padding-top: 4rem;
   height: 100%;
 
+  @media (max-width: 60rem) {
+    grid-template-columns: 1fr;
+    margin-top: 2.37rem;
+  }
+
   &__title {
     grid-row: 1/2;
     font-weight: $font-bold;
     font-size: $text-sm;
     max-width: 10.4375rem;
+    text-align: left;
+
+    svg {
+      display: none;
+      
+      @media (max-width: 60rem) {
+        display: block;
+      }
+    }
+
+    @media (max-width: 60rem) {
+      cursor: pointer;
+      grid-row: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+      padding: 0.5rem 0;
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
   &__item {
@@ -39,6 +66,20 @@
     &:last-child {
       padding-bottom: 2.3125rem;
     }
+    
+    &--show-mob {
+      display: block;
+    }
+  }
+  
+  &__list {
+    @media (max-width: 60rem) {
+      display: none;
+    }
+
+    &--active {
+      display: block;
+    }
   }
 
   &__input {
@@ -49,13 +90,19 @@
   &__logo {
     height: 100%;
   }
+}
 
-  &__copyright {
-    font-weight: 500;
-    color: #333;
-    font-size: $text-ty;
-    height: 100%;
-    padding: 0.5rem 0;
+.copyright {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #333;
+  font-size: $text-ty;
+  height: 100%;
+  padding: 0.5rem 0;
+
+  &__description {
+    margin-left: 1.3rem;
   }
 }
 
@@ -66,4 +113,9 @@
   justify-content: start;
   align-items: center;
   gap: 2.1775rem;
+
+  @media (max-width: 60rem) {
+    grid-column: 1/2;
+    padding-bottom: 3.25rem;
+  }
 }

@@ -6,6 +6,23 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: 60rem) {
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  &__search {
+    @media (max-width: 60rem) {
+      order: 6;
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__logo {
+    width: 40%;
+  }
+
   &__link {
     color: $black;
     font-weight: $font-bold;
@@ -13,6 +30,13 @@
     align-items: center;
     text-transform: uppercase;
     font-size: 0.75rem;
+
+    &__description {
+      min-width: 1rem;
+      @media (max-width: 60rem) {
+        display: none;
+      }
+    }
 
     &--disable {
       font-size: $text-1xs;
@@ -22,6 +46,38 @@
   }
 
   &__icon {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+  }
+
+  &__nav {
+    @media (max-width: 60rem) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    &--active {
+      display: block;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.menu-mobile {
+  display: none;
+  margin-right: 1.44rem;
+  z-index: 300;
+  
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 60rem) {
+    display: block;
   }
 }

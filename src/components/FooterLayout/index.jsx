@@ -5,6 +5,7 @@ import { ReactComponent as Facebook } from '../../assets/img/facebook.svg';
 import { ReactComponent as Instagram } from '../../assets/img/instagram.svg';
 import { ReactComponent as Twitter } from '../../assets/img/twitter.svg';
 import { ReactComponent as Youtube } from '../../assets/img/youtube.svg';
+import { ReactComponent as ArrowDown } from '../../assets/img/ic-arrow-down.svg';
 
 import { postSubscription } from '../../api';
 
@@ -31,18 +32,37 @@ function FooterLayout() {
     }
   }
 
+  const handleActiveLista = id => {
+    console.log(id);
+    document.querySelector(id).classList.toggle('footer__list--active');
+  };
+
   return (
     <footer className="footer-wrapper">
       <div className="container footer">
-        <h3 className="footer__title">CONTACT US</h3>
-        <ul className="footer__list">
+        <button
+          type="button"
+          onClick={() => handleActiveLista('#contactUs')}
+          className="footer__title"
+        >
+          CONTACT US
+          <ArrowDown />
+        </button>
+        <ul className="footer__list" id="contactUs">
           <li className="footer__item">
             <a href="#">Email us</a>
           </li>
         </ul>
 
-        <h3 className="footer__title">CUSTOMER SERVICE</h3>
-        <ul className="footer__list">
+        <button
+          type="button"
+          onClick={() => handleActiveLista('#customerService')}
+          className="footer__title"
+        >
+          CUSTOMER SERVICE
+          <ArrowDown />
+        </button>
+        <ul className="footer__list" id="customerService">
           <li className="footer__item">
             <a href="#">Shipping and returns</a>
           </li>
@@ -60,8 +80,15 @@ function FooterLayout() {
           </li>
         </ul>
 
-        <h3 className="footer__title">About US</h3>
-        <ul className="footer__list">
+        <button
+          type="button"
+          onClick={() => handleActiveLista('#aboutUS')}
+          className="footer__title"
+        >
+          About US
+          <ArrowDown />
+        </button>
+        <ul className="footer__list" id="aboutUS">
           <li className="footer__item">
             <a href="#">Career</a>
           </li>
@@ -76,8 +103,15 @@ function FooterLayout() {
           </li>
         </ul>
 
-        <h3 className="footer__title">International shopping</h3>
-        <ul className="footer__list">
+        <button
+          type="button"
+          onClick={() => handleActiveLista('#internationalShopping')}
+          className="footer__title"
+        >
+          International shopping
+          <ArrowDown />
+        </button>
+        <ul className="footer__list" id="internationalShopping">
           <li className="footer__item">
             <a href="#">Choose country</a>
           </li>
@@ -87,7 +121,7 @@ function FooterLayout() {
         </ul>
 
         <h3 className="footer__title">SIGN UP FOR THE NEWSLETTER</h3>
-        <ul className="footer__list">
+        <ul>
           <li className="footer__item">
             Be the first to hear about our latest launches, new colors, and
             events.
@@ -108,12 +142,12 @@ function FooterLayout() {
           </li>
         </ul>
 
-        <div className="footer__logo">
-          <a href="#">
+        <div className="copyright">
+          <a className="copyright__logo" href="#">
             <Logo />
           </a>
+          <p className="copyright__description">© 2020 Imagination Media</p>
         </div>
-        <div className="footer__copyright">© 2020 Imagination Media</div>
         <ul className="social">
           <li className="social__item">
             <a href="#">
