@@ -71,6 +71,7 @@ function ProductsGallery() {
   };
 
   const handleFilterClick = filterSelected => {
+    setPage(1);
     const filters = [...filter];
     if (filter.includes(filterSelected)) {
       const IndexOfFilter = filters.indexOf(filterSelected);
