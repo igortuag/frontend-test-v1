@@ -84,7 +84,7 @@ function ProductsGallery() {
                 />
               );
             })
-          : 'ainda Não'}
+          : 'Loading...'}
       </ul>
 
       <header className="gallery__footer">

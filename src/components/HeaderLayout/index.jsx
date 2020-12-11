@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
 import { ReactComponent as User } from '../../assets/img/ic-user.svg';
@@ -9,6 +10,8 @@ import NavMenu from '../NavMenu';
 import './styles.scss';
 
 function HeaderLayout() {
+  const { products } = useSelector(state => state.cart);
+
   return (
     <header>
       <div className="header container">
@@ -30,7 +33,7 @@ function HeaderLayout() {
           <div className="header__icon">
             <Cart />
           </div>
-          (1)
+          {`(${products})`}
         </a>
       </div>
       <NavMenu />
