@@ -15,7 +15,9 @@ function HeaderLayout() {
   return (
     <header>
       <div className="header container">
-        <Logo />
+        <a href="#">
+          <Logo />
+        </a>
         <SearchInput />
         <a href="#" className="header__link header__link--disable">
           LOCATION

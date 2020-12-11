@@ -12,12 +12,22 @@
     left: 400px;
     top: 92px;
 
+    &--success {
+      outline: 2px solid $black;
+      border-bottom: 3px solid #2ED58F;
+    }
+
+    &--error {
+      outline: 2px solid $black;
+      border-bottom: 3px solid #D5462E;
+    }
+    
     &:focus {
       border: 1px solid $white;
       font-size: $text-base;
       color: $black;
       box-shadow: 0px 4px 24px -6px rgba(22, 63, 80, 0.15);
       outline: 0;
-    }
+    }    
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { ReactComponent as Logo } from '../../assets/img/logo-small.svg';
 import { ReactComponent as Facebook } from '../../assets/img/facebook.svg';
@@ -6,38 +6,84 @@ import { ReactComponent as Instagram } from '../../assets/img/instagram.svg';
 import { ReactComponent as Twitter } from '../../assets/img/twitter.svg';
 import { ReactComponent as Youtube } from '../../assets/img/youtube.svg';
 
+import { postSubscription } from '../../api';
+
 import './styles.scss';
 
 function FooterLayout() {
+  const [email, setEmail] = useState('');
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const data = {
+      email,
+    };
+
+    try {
+      await postSubscription(data);
+      document
+        .querySelector('#email')
+        .classList.add('main-input__field--success');
+    } catch (error) {
+      document
+        .querySelector('#email')
+        .classList.add('main-input__field--error');
+    }
+  }
+
   return (
     <footer className="footer-wrapper">
       <div className="container footer">
         <h3 className="footer__title">CONTACT US</h3>
         <ul className="footer__list">
-          <li className="footer__item">Email us</li>
+          <li className="footer__item">
+            <a href="#">Email us</a>
+          </li>
         </ul>
 
         <h3 className="footer__title">CUSTOMER SERVICE</h3>
         <ul className="footer__list">
-          <li className="footer__item">Shipping and returns</li>
-          <li className="footer__item">My Orders</li>
-          <li className="footer__item">To Make a Return</li>
-          <li className="footer__item">FAQ</li>
-          <li className="footer__item">Terms and Conditions</li>
+          <li className="footer__item">
+            <a href="#">Shipping and returns</a>
+          </li>
+          <li className="footer__item">
+            <a href="#">My Orders</a>
+          </li>
+          <li className="footer__item">
+            <a href="#">To Make a Return</a>
+          </li>
+          <li className="footer__item">
+            <a href="#">FAQ</a>
+          </li>
+          <li className="footer__item">
+            <a href="#">Terms and Conditions</a>
+          </li>
         </ul>
 
         <h3 className="footer__title">About US</h3>
         <ul className="footer__list">
-          <li className="footer__item">Career</li>
-          <li className="footer__item">Privacy</li>
-          <li className="footer__item">Privacy Policy</li>
-          <li className="footer__item">Sitemap</li>
+          <li className="footer__item">
+            <a href="#">Career</a>
+          </li>
+          <li className="footer__item">
+            <a href="#">Privacy</a>
+          </li>
+          <li className="footer__item">
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li className="footer__item">
+            <a href="#">Sitemap</a>
+          </li>
         </ul>
 
         <h3 className="footer__title">International shopping</h3>
         <ul className="footer__list">
-          <li className="footer__item">Choose country</li>
-          <li className="footer__item">Locate a store</li>
+          <li className="footer__item">
+            <a href="#">Choose country</a>
+          </li>
+          <li className="footer__item">
+            <a href="#">Locate a store</a>
+          </li>
         </ul>
 
         <h3 className="footer__title">SIGN UP FOR THE NEWSLETTER</h3>
@@ -45,21 +91,27 @@ function FooterLayout() {
           <li className="footer__item">
             Be the first to hear about our latest launches, new colors, and
             events.
-            <div className="main-input">
+            <form className="main-input" onSubmit={handleSubmit}>
               <input
                 className="footer__input main-input__field"
                 type="email"
+                id="email"
                 placeholder="Email address"
+                value={email}
+                required
+                onChange={event => setEmail(event.target.value)}
               />
-            </div>
-            <button type="button" className="btn btn--small">
-              SIGN UP
-            </button>
+              <button type="submit" className="btn btn--small">
+                SIGN UP
+              </button>
+            </form>
           </li>
         </ul>
 
         <div className="footer__logo">
-          <Logo />
+          <a href="#">
+            <Logo />
+          </a>
         </div>
         <div className="footer__copyright">© 2020 Imagination Media</div>
         <ul className="social">
