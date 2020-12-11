@@ -1,4 +1,7 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+
+import { addProductCart } from '../../store/cart';
 
 import './styles.scss';
 
@@ -8,12 +11,22 @@ function ProductsCard({
   productDescription,
   productPrice,
 }) {
+  const dispatch = useDispatch();
+
+  const handleClickAddToCart = () => {
+    dispatch(addProductCart());
+  };
+
   return (
     <div className="card">
       <div className="card__img">
-        <img src={`img/${productImgNumber}.png`} alt="Pg 3 Nasa" />
+        <img src={`img/${productImgNumber}.png`} alt={productName} />
       </div>
-      <button type="button" className="btn card__btn">
+      <button
+        onClick={() => handleClickAddToCart()}
+        type="button"
+        className="btn card__btn"
+      >
         ADD TO CART
       </button>
       <footer className="card__footer">
