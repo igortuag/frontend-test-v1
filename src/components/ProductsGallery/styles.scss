@@ -47,6 +47,14 @@
     }
   }
 
+  &__link {
+    padding: 0.5rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   &__current {
     font-size: $text-ty;
     width: 40px;
