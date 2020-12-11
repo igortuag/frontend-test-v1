@@ -1,10 +1,6 @@
+@import '../../styles/global';
+
 .home {
   &__content {
   }
-}
-
-.products-showcase {
-  display: grid;
-  grid-template-columns: 20.625rem auto;
-  padding-top: 2.75rem;
 }
